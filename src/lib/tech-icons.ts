@@ -9,7 +9,6 @@ import {
   siGraphql,
   siHtml5,
   siJavascript,
-  siJetpackcompose,
   siKotlin,
   siMysql,
   siN8n,
@@ -73,7 +72,6 @@ const catalog: Record<string, TechIconData> = {
   android: fromSimple(siAndroid),
   "android tv": fromSimple(siAndroid),
   flutter: fromSimple(siFlutter),
-  "jetpack compose": fromSimple(siJetpackcompose),
   n8n: fromSimple(siN8n),
   figma: fromSimple(siFigma),
   vite: fromSimple(siVite),
@@ -93,7 +91,6 @@ export function resolveTechIcon(label: string): TechIconData | null {
   if (catalog[lower]) return catalog[lower];
   if (lower.startsWith("aws")) return catalog.aws;
   if (lower.includes("android")) return catalog.android;
-  if (lower.includes("jetpack")) return catalog["jetpack compose"];
   if (lower.includes("next.js") || lower.includes("nextjs")) {
     return catalog["next.js"];
   }

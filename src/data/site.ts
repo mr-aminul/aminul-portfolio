@@ -1,18 +1,12 @@
 export const site = {
   name: "Aminul Islam",
-  shortName: "Aminul",
   role: "Full-Stack Engineer · Automation Specialist",
-  headline: "Production platforms, automation, and multi-surface products.",
   location: "Dhaka, Bangladesh",
   email: "aminulislamborhan@gmail.com",
   phone: "+880 1632-257352",
   phoneHref: "tel:+8801632257352",
   whatsapp: "https://wa.me/8801632257352",
   availability: "Open to full-stack roles and select product engagements.",
-  tagline:
-    "Enterprise systems, digital signage, and full-stack products — shipped end to end.",
-  bioShort:
-    "Co-founder of Inventive Lab and the engineer behind OneSign. I build platforms hundreds of employees rely on — and products that live on web, mobile, and TV.",
   bio: "Full-stack engineer with hands-on experience delivering production-grade enterprise platforms, web applications, and mobile solutions. Strong in TypeScript, React, Next.js, Node.js, and AWS, with a track record of building scalable internal systems used by 500–700 employees globally — saving organizations $5,000–$10,000 annually by replacing commercial SaaS tools. Co-founder of Inventive Lab Inc (OneSign digital signage). Additional focus on AI-driven automation and Android/Flutter development.",
   avatar: "https://avatars.githubusercontent.com/u/193484955?v=4",
   resumePath: "/resume",
@@ -21,7 +15,6 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/theaminulislam/",
     lab: "https://inventivelab.bd",
     onesign: "https://onesigntv.com",
-    labDemo: "https://inventivelab-website.vercel.app",
   },
 } as const;
 
@@ -35,29 +28,6 @@ export const stack = {
   automation: ["n8n", "AI-driven workflows"],
   design: ["Figma", "Adobe XD", "Illustrator"],
 } as const;
-
-export const capabilities = [
-  {
-    title: "Enterprise platforms",
-    detail:
-      "Design and ship internal systems used by hundreds of employees — OKRs, quality, performance, and attendance — with measurable cost and time savings.",
-  },
-  {
-    title: "Full-stack product delivery",
-    detail:
-      "TypeScript, React, Next.js, Node.js, PostgreSQL/Supabase, AWS, plus Android/Flutter and TV players when the product needs more than a browser.",
-  },
-  {
-    title: "AI & automation",
-    detail:
-      "n8n and AI-assisted workflows that cut manual ops, consolidate tools, and give leadership clearer KPI visibility.",
-  },
-  {
-    title: "Multi-surface products",
-    detail:
-      "Web consoles, investor portals, mobile apps, and digital signage fleets — architecture through UI/UX, backend, and deploy.",
-  },
-] as const;
 
 export type Project = {
   title: string;

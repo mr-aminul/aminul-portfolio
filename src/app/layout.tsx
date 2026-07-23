@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
-const siteUrl = "https://aminul-portfolio.vercel.app";
+const siteUrl = "https://aminul-portfolio-rho.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
