@@ -10,9 +10,6 @@ import { Work } from "@/components/Work";
 export default function Home() {
   return (
     <>
-      <a href="#work" className="skip-link">
-        Skip to projects
-      </a>
       <Header />
       <main className="flex-1">
         <Hero />

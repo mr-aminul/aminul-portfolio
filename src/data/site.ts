@@ -77,23 +77,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Ukilai",
-    subtitle: "Law firm ERP",
-    description:
-      "Cases, billing, staff, and day-to-day operations for legal teams — a production ERP spanning Next.js UI and a Go GraphQL API.",
-    highlights: [
-      "Owned full-stack delivery: case workflows, billing surfaces, and shared design tokens across clients.",
-      "Split concerns with a Go + GraphQL API so legal ops data stays consistent for staff and partners.",
-      "Shipped a deployable Vercel frontend used as the live product surface for firm operations.",
-    ],
-    stack: ["Next.js", "Go", "GraphQL", "TypeScript"],
-    live: "https://ukilai.vercel.app",
-    repo: "https://github.com/mr-aminul/law-erp",
-    year: "2025–2026",
-    image: "/projects/ukilai.png",
-    featured: true,
-  },
-  {
     title: "Diagnostic Center",
     subtitle: "Healthcare portal",
     description:
@@ -111,16 +94,35 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Auto-Logistic Commerce",
-    subtitle: "E-commerce + courier automation",
+    title: "Ukilai",
+    subtitle: "Law firm ERP",
     description:
-      "Full e-commerce platform with browsing, recipes, cart, payments, and automated dispatch via Pathao, Steadfast, and REDX courier APIs.",
+      "Cases, billing, staff, and day-to-day operations for legal teams — a production ERP spanning Next.js UI and a Go GraphQL API.",
     highlights: [
-      "Integrated three courier APIs to eliminate manual order processing for the client.",
-      "Shipped product catalog, cart, and payment-gateway flows in a single Next.js stack.",
+      "Owned full-stack delivery: case workflows, billing surfaces, and shared design tokens across clients.",
+      "Split concerns with a Go + GraphQL API so legal ops data stays consistent for staff and partners.",
+      "Shipped a deployable Vercel frontend used as the live product surface for firm operations.",
     ],
-    stack: ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL"],
+    stack: ["Next.js", "Go", "GraphQL", "TypeScript"],
+    live: "https://ukilai.vercel.app",
+    repo: "https://github.com/mr-aminul/law-erp",
+    year: "2025–2026",
+    image: "/projects/ukilai.png",
+    featured: true,
+  },
+  {
+    title: "Chilirig",
+    subtitle: "Product experience",
+    description:
+      "Polished TypeScript product demo focused on interaction quality and a clean live deploy.",
+    highlights: [
+      "Built and deployed a self-contained product UI as a public demo.",
+    ],
+    stack: ["TypeScript"],
+    live: "https://chilirig.vercel.app",
+    repo: "https://github.com/mr-aminul/chilirig",
     year: "2025",
+    image: "/projects/chilirig.jpg",
     featured: true,
   },
   {
@@ -136,6 +138,65 @@ export const projects: Project[] = [
     repo: "https://github.com/mr-aminul/invoice-management-system",
     year: "2025",
     image: "/projects/invoice-management.png",
+    featured: true,
+  },
+  {
+    title: "Auto-Logistic Commerce",
+    subtitle: "E-commerce + courier automation",
+    description:
+      "Full e-commerce platform with browsing, recipes, cart, payments, and automated dispatch via Pathao, Steadfast, and REDX courier APIs.",
+    highlights: [
+      "Integrated three courier APIs to eliminate manual order processing for the client.",
+      "Shipped product catalog, cart, and payment-gateway flows in a single Next.js stack.",
+    ],
+    stack: ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL"],
+    year: "2025",
+    featured: true,
+  },
+  {
+    title: "Inventive Lab",
+    subtitle: "Company site",
+    description:
+      "Brand and product presence for Inventive Lab Inc — the studio behind OneSign and client systems.",
+    highlights: [
+      "Built the public marketing site for the studio and product lineup.",
+    ],
+    stack: ["Next.js", "TypeScript"],
+    live: "https://inventivelab-website.vercel.app",
+    repo: "https://github.com/mr-aminul/inventivelab-website",
+    year: "2025",
+    image: "/projects/inventivelab.png",
+    featured: true,
+  },
+  {
+    title: "QuizMaster",
+    subtitle: "Interactive learning",
+    description:
+      "University quiz platform with PHP + MySQL locally and a live SQLite-backed Vercel demo.",
+    highlights: [
+      "Delivered quiz creation and attempt flows for classroom use.",
+    ],
+    stack: ["PHP", "MySQL", "SQLite"],
+    live: "https://quizmaster-liard-six.vercel.app",
+    repo: "https://github.com/mr-aminul/QuizMaster",
+    year: "2025",
+    image: "/projects/quizmaster.png",
+    featured: true,
+  },
+  {
+    title: "Verdana Plant Shop",
+    subtitle: "Commerce landing",
+    description:
+      "Premium indoor plant delivery landing with cart, filters, checkout, and newsletter.",
+    highlights: [
+      "Shipped a complete storefront landing experience in vanilla HTML/CSS/JS.",
+    ],
+    stack: ["HTML", "CSS", "JavaScript"],
+    live: "https://verdana-plant-shop.vercel.app",
+    repo: "https://github.com/mr-aminul/verdana-plant-shop",
+    year: "2025",
+    image: "/projects/verdana-plant-shop.png",
+    featured: true,
   },
   {
     title: "Auth Basement",
@@ -164,62 +225,6 @@ export const projects: Project[] = [
     repo: "https://github.com/mr-aminul/SaaS-Basement",
     year: "2025",
     image: "/projects/saas-basement.png",
-  },
-  {
-    title: "Inventive Lab",
-    subtitle: "Company site",
-    description:
-      "Brand and product presence for Inventive Lab Inc — the studio behind OneSign and client systems.",
-    highlights: [
-      "Built the public marketing site for the studio and product lineup.",
-    ],
-    stack: ["Next.js", "TypeScript"],
-    live: "https://inventivelab-website.vercel.app",
-    repo: "https://github.com/mr-aminul/inventivelab-website",
-    year: "2025",
-    image: "/projects/inventivelab.png",
-  },
-  {
-    title: "QuizMaster",
-    subtitle: "Interactive learning",
-    description:
-      "University quiz platform with PHP + MySQL locally and a live SQLite-backed Vercel demo.",
-    highlights: [
-      "Delivered quiz creation and attempt flows for classroom use.",
-    ],
-    stack: ["PHP", "MySQL", "SQLite"],
-    live: "https://quizmaster-liard-six.vercel.app",
-    repo: "https://github.com/mr-aminul/QuizMaster",
-    year: "2025",
-    image: "/projects/quizmaster.png",
-  },
-  {
-    title: "Verdana Plant Shop",
-    subtitle: "Commerce landing",
-    description:
-      "Premium indoor plant delivery landing with cart, filters, checkout, and newsletter.",
-    highlights: [
-      "Shipped a complete storefront landing experience in vanilla HTML/CSS/JS.",
-    ],
-    stack: ["HTML", "CSS", "JavaScript"],
-    live: "https://verdana-plant-shop.vercel.app",
-    repo: "https://github.com/mr-aminul/verdana-plant-shop",
-    year: "2025",
-    image: "/projects/verdana-plant-shop.png",
-  },
-  {
-    title: "Chilirig",
-    subtitle: "Product experience",
-    description:
-      "Polished TypeScript product demo focused on interaction quality and a clean live deploy.",
-    highlights: [
-      "Built and deployed a self-contained product UI as a public demo.",
-    ],
-    stack: ["TypeScript"],
-    live: "https://chilirig.vercel.app",
-    repo: "https://github.com/mr-aminul/chilirig",
-    year: "2025",
-    image: "/projects/chilirig.jpg",
   },
 ];
 

@@ -99,22 +99,6 @@ a {
   border: 0;
 }
 
-.skip-link {
-  position: absolute;
-  left: 1rem;
-  top: -100%;
-  z-index: 100;
-  padding: 0.75rem 1rem;
-  background: var(--foreground);
-  color: var(--background);
-  font-weight: 500;
-  border-radius: var(--radius-sm);
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
 .container-page {
   width: 100%;
   max-width: 720px;
@@ -632,7 +616,6 @@ a {
 @media print {
 
   .site-header,
-  .skip-link,
   .print\:hidden {
     display: none !important;
   }
