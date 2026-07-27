@@ -89,7 +89,10 @@ export function resolveTechIcon(label: string): TechIconData | null {
   const lower = label.trim().toLowerCase();
 
   if (catalog[lower]) return catalog[lower];
-  if (lower.startsWith("aws")) return catalog.aws;
+  if (lower.startsWith("aws") || lower === "s3") return catalog.aws;
+  if (lower.includes("fastify") || lower.includes("rest api")) {
+    return catalog["node.js"];
+  }
   if (lower.includes("android")) return catalog.android;
   if (lower.includes("next.js") || lower.includes("nextjs")) {
     return catalog["next.js"];

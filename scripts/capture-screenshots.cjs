@@ -6,15 +6,9 @@ const OUT_DIR = path.join(__dirname, "..", "public", "projects");
 
 const targets = [
   { slug: "onesign", url: "https://onesigntv.com" },
+  { slug: "cqms", url: "https://cqms-v2.vercel.app" },
   { slug: "ukilai", url: "https://ukilai.vercel.app" },
   { slug: "diagnostic-center", url: "https://diagnostic-center-website-omega.vercel.app" },
-  { slug: "inventivelab", url: "https://inventivelab-website.vercel.app" },
-  { slug: "invoice-management", url: "https://invoice-management-system-three-chi.vercel.app" },
-  { slug: "auth-basement", url: "https://auth-basement.vercel.app" },
-  { slug: "saas-basement", url: "https://saas-basement.vercel.app" },
-  { slug: "quizmaster", url: "https://quizmaster-liard-six.vercel.app" },
-  { slug: "verdana-plant-shop", url: "https://verdana-plant-shop.vercel.app" },
-  { slug: "chilirig", url: "https://chilirig.vercel.app" },
 ];
 
 async function captureOne(browser, { slug, url }) {

@@ -42,13 +42,16 @@ export type Project = {
   featured?: boolean;
 };
 
-/** Personal / Inventive Lab / client work shown in the main portfolio. */
+/**
+ * Portfolio projects — tight shortlist.
+ * Featured = main grid (case-study depth). Non-featured with image = "More work".
+ */
 export const projects: Project[] = [
   {
     title: "OneSign",
     subtitle: "Digital signage platform",
     description:
-      "Inventive Lab’s flagship product — turn any TV into a remotely managed display. Live at onesigntv.com; also deployed for UK restaurant-chain signage with web admin + Android TV players.",
+      "Inventive Lab’s flagship product — turn any TV into a remotely managed display. Live product with web admin, Android TV players, and a Flutter client; also deployed for multi-site restaurant signage.",
     highlights: [
       "Built a full-stack signage platform: Next.js console, Kotlin Android TV player, Flutter client, and Supabase backend with realtime playlist sync.",
       "Device pairing with anonymous TV auth, pairing codes, RLS-scoped ownership, and fleet monitoring.",
@@ -59,6 +62,73 @@ export const projects: Project[] = [
     repo: "https://github.com/Inventive-Lab-Inc/onesign",
     year: "2025–2026",
     image: "/projects/onesign.jpg",
+    featured: true,
+  },
+  {
+    title: "CQMS",
+    subtitle: "Enterprise quality & audit platform",
+    description:
+      "AI-assisted quality management system for NEXT Ventures — audits, scoring, and ops workflows used across a global workforce, replacing multiple commercial SaaS tools.",
+    highlights: [
+      "Core contributor on a large production web platform (CQMS / Web-CQMS) used by 500–700 employees globally.",
+      "Helped cut audit time ~50%, consolidate 4+ tools, and replace Scorebuddy — $4,000+ annual savings.",
+      "Shipped AI-powered audit flows with progress tracking and results surfaces for ops leadership.",
+    ],
+    stack: ["TypeScript", "React", "Next.js", "PostgreSQL", "n8n", "AWS"],
+    live: "https://cqms-v2.vercel.app",
+    repo: "https://github.com/NEXT-Data-Automation-and-Research/cqms",
+    year: "2025–2026",
+    image: "/projects/cqms.png",
+    featured: true,
+  },
+  {
+    title: "Caliper",
+    subtitle: "AI CV screening",
+    description:
+      "Recruiter-facing CV screening product: upload or pull CVs, score candidates against job criteria, and surface related LinkedIn profiles — React frontend with a Fastify API on AWS.",
+    highlights: [
+      "Designed a production architecture: React + Vite client, Fastify API, Google OAuth, AWS RDS Postgres, and S3 for CV storage.",
+      "Built AI scoring against job criteria with optional Recruitee / profile-discovery integrations.",
+      "Workspace provisioning, JWT auth via Google JWKS, and encrypted workspace API keys at the boundary.",
+    ],
+    stack: ["React", "TypeScript", "Fastify", "AWS", "PostgreSQL", "S3"],
+    repo: "https://github.com/aminulnv/Caliper-CV-Screening",
+    year: "2026",
+    image: "/projects/caliper.png",
+    featured: true,
+  },
+  {
+    title: "Ukilai",
+    subtitle: "Law firm ERP",
+    description:
+      "Cases, billing, staff, and day-to-day operations for legal teams — a production ERP spanning a Next.js UI and a Go GraphQL API.",
+    highlights: [
+      "Owned full-stack delivery: case workflows, billing surfaces, and shared design tokens across the monorepo.",
+      "Split concerns with a Go + GraphQL API so legal ops data stays consistent for staff and partners.",
+      "Shipped a deployable Vercel frontend used as the live product surface for firm operations.",
+    ],
+    stack: ["Next.js", "Go", "GraphQL", "TypeScript"],
+    live: "https://ukilai.vercel.app",
+    repo: "https://github.com/mr-aminul/law-erp",
+    year: "2025–2026",
+    image: "/projects/ukilai.png",
+    featured: true,
+  },
+  {
+    title: "Diagnostic Center",
+    subtitle: "Healthcare portal",
+    description:
+      "Multi-tenant diagnostic template with a bilingual public site (Bangla / English), patient OTP portal, and staff admin for bookings and reports.",
+    highlights: [
+      "Designed multi-tenant structure so clinics can run branded public + staff experiences from one codebase.",
+      "Built patient OTP access and staff admin for bookings, reports, and operational handoff.",
+      "Shipped Bangla/English UX so front-desk and patient flows work for local teams.",
+    ],
+    stack: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
+    live: "https://diagnostic-center-website-omega.vercel.app",
+    repo: "https://github.com/mr-aminul/diagnostic-center-website",
+    year: "2025–2026",
+    image: "/projects/diagnostic-center.jpg",
     featured: true,
   },
   {
@@ -77,154 +147,19 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Diagnostic Center",
-    subtitle: "Healthcare portal",
+    title: "Krunch POS",
+    subtitle: "Point of sale · contribution",
     description:
-      "Multi-tenant diagnostic template with a bilingual public site, patient OTP portal, and staff admin for bookings and reports.",
+      "Restaurant POS and back-office workspace — contributed billing, ledger, calendar, admin users, and mobile console improvements on a TypeScript + native stack.",
     highlights: [
-      "Designed multi-tenant structure so clinics can run branded public + staff experiences from one codebase.",
-      "Built patient OTP access and staff admin for bookings, reports, and operational handoff.",
-      "Shipped Bangla/English UX so front-desk and patient flows work for local teams.",
+      "Shipped billing QA fixes, workspace/admin flows, and mobile UI polish ahead of deploy.",
+      "Hardened Daily Entry / ledger saves against API body-size limits for real shift volumes.",
+      "Collaborated across web and mobile surfaces used in live store operations.",
     ],
-    stack: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
-    live: "https://diagnostic-center-website-omega.vercel.app",
-    repo: "https://github.com/mr-aminul/diagnostic-center-website",
-    year: "2025–2026",
-    image: "/projects/diagnostic-center.jpg",
-    featured: true,
-  },
-  {
-    title: "Ukilai",
-    subtitle: "Law firm ERP",
-    description:
-      "Cases, billing, staff, and day-to-day operations for legal teams — a production ERP spanning Next.js UI and a Go GraphQL API.",
-    highlights: [
-      "Owned full-stack delivery: case workflows, billing surfaces, and shared design tokens across clients.",
-      "Split concerns with a Go + GraphQL API so legal ops data stays consistent for staff and partners.",
-      "Shipped a deployable Vercel frontend used as the live product surface for firm operations.",
-    ],
-    stack: ["Next.js", "Go", "GraphQL", "TypeScript"],
-    live: "https://ukilai.vercel.app",
-    repo: "https://github.com/mr-aminul/law-erp",
-    year: "2025–2026",
-    image: "/projects/ukilai.png",
-    featured: true,
-  },
-  {
-    title: "Chilirig",
-    subtitle: "Product experience",
-    description:
-      "Polished TypeScript product demo focused on interaction quality and a clean live deploy.",
-    highlights: [
-      "Built and deployed a self-contained product UI as a public demo.",
-    ],
-    stack: ["TypeScript"],
-    live: "https://chilirig.vercel.app",
-    repo: "https://github.com/mr-aminul/chilirig",
-    year: "2025",
-    image: "/projects/chilirig.jpg",
-    featured: true,
-  },
-  {
-    title: "Invoice Management",
-    subtitle: "Billing ops",
-    description:
-      "Invoice and billing management system for day-to-day financial operations — create, track, and close invoices without spreadsheet chaos.",
-    highlights: [
-      "Modeled invoice lifecycle UI for create → send → track → settle workflows.",
-    ],
-    stack: ["Next.js", "TypeScript"],
-    live: "https://invoice-management-system-three-chi.vercel.app",
-    repo: "https://github.com/mr-aminul/invoice-management-system",
-    year: "2025",
-    image: "/projects/invoice-management.png",
-    featured: true,
-  },
-  {
-    title: "Auto-Logistic Commerce",
-    subtitle: "E-commerce + courier automation",
-    description:
-      "Full e-commerce platform with browsing, recipes, cart, payments, and automated dispatch via Pathao, Steadfast, and REDX courier APIs.",
-    highlights: [
-      "Integrated three courier APIs to eliminate manual order processing for the client.",
-      "Shipped product catalog, cart, and payment-gateway flows in a single Next.js stack.",
-    ],
-    stack: ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL"],
-    year: "2025",
-    featured: true,
-  },
-  {
-    title: "Inventive Lab",
-    subtitle: "Company site",
-    description:
-      "Brand and product presence for Inventive Lab Inc — the studio behind OneSign and client systems.",
-    highlights: [
-      "Built the public marketing site for the studio and product lineup.",
-    ],
-    stack: ["Next.js", "TypeScript"],
-    live: "https://inventivelab-website.vercel.app",
-    repo: "https://github.com/mr-aminul/inventivelab-website",
-    year: "2025",
-    image: "/projects/inventivelab.png",
-    featured: true,
-  },
-  {
-    title: "QuizMaster",
-    subtitle: "Interactive learning",
-    description:
-      "University quiz platform with PHP + MySQL locally and a live SQLite-backed Vercel demo.",
-    highlights: [
-      "Delivered quiz creation and attempt flows for classroom use.",
-    ],
-    stack: ["PHP", "MySQL", "SQLite"],
-    live: "https://quizmaster-liard-six.vercel.app",
-    repo: "https://github.com/mr-aminul/QuizMaster",
-    year: "2025",
-    image: "/projects/quizmaster.png",
-    featured: true,
-  },
-  {
-    title: "Verdana Plant Shop",
-    subtitle: "Commerce landing",
-    description:
-      "Premium indoor plant delivery landing with cart, filters, checkout, and newsletter.",
-    highlights: [
-      "Shipped a complete storefront landing experience in vanilla HTML/CSS/JS.",
-    ],
-    stack: ["HTML", "CSS", "JavaScript"],
-    live: "https://verdana-plant-shop.vercel.app",
-    repo: "https://github.com/mr-aminul/verdana-plant-shop",
-    year: "2025",
-    image: "/projects/verdana-plant-shop.png",
-    featured: true,
-  },
-  {
-    title: "Auth Basement",
-    subtitle: "Auth starter",
-    description:
-      "Reusable Supabase auth template with protected routes, app shell, and client-ready env setup.",
-    highlights: [
-      "Packaged sign-in, session handling, and protected routes as a reusable foundation.",
-    ],
-    stack: ["React", "Supabase", "Vite", "TypeScript"],
-    live: "https://auth-basement.vercel.app",
-    repo: "https://github.com/mr-aminul/Auth-Basement",
-    year: "2025",
-    image: "/projects/auth-basement.png",
-  },
-  {
-    title: "SaaS Basement",
-    subtitle: "SaaS starter",
-    description:
-      "Top-nav SaaS shell with auth, layout primitives, and a clean path from template to product.",
-    highlights: [
-      "Shipped a reusable app shell so new SaaS products start with navigation, auth, and layout already solved.",
-    ],
-    stack: ["React", "Supabase", "Vite"],
-    live: "https://saas-basement.vercel.app",
-    repo: "https://github.com/mr-aminul/SaaS-Basement",
-    year: "2025",
-    image: "/projects/saas-basement.png",
+    stack: ["TypeScript", "React", "Express", "Mobile"],
+    repo: "https://github.com/SaifIvnaAlam/krunch-pos",
+    year: "2026",
+    image: "/projects/krunch-pos.png",
   },
 ];
 
@@ -248,7 +183,7 @@ export const experience: ExperienceRole[] = [
     period: "2025 — Present",
     role: "Co-Founder · Full-Stack Engineer",
     summary:
-      "Co-founded a product studio shipping OneSign digital signage and client systems across legal, healthcare, billing, and commerce.",
+      "Co-founded a product studio shipping OneSign digital signage and client systems across legal, healthcare, and capital markets.",
     contributions: [
       {
         title: "OneSign",
@@ -266,12 +201,12 @@ export const experience: ExperienceRole[] = [
         title: "Client systems",
         role: "End-to-end ownership",
         summary:
-          "Production apps including Ukilai (law ERP), diagnostic portals, and billing tools.",
+          "Production apps including Ukilai (law ERP) and multi-tenant diagnostic portals.",
         contributions: [
           "Led discovery-to-deploy delivery for ops-heavy client systems.",
-          "Built auth/SaaS foundations to shorten time-to-first-feature on new engagements.",
+          "Shipped Next.js + Go GraphQL monorepos and bilingual healthcare templates ready for new tenants.",
         ],
-        stack: ["Next.js", "Go", "PostgreSQL", "Supabase", "Vercel"],
+        stack: ["Next.js", "Go", "PostgreSQL", "Prisma", "Vercel"],
       },
     ],
   },
@@ -283,28 +218,28 @@ export const experience: ExperienceRole[] = [
       "Architected and delivered enterprise internal platforms used by 500–700 employees globally — replacing commercial SaaS and cutting audit/ops cost.",
     contributions: [
       {
-        title: "Internal platforms",
+        title: "CQMS & internal platforms",
         role: "Full-stack architecture & delivery",
         summary:
-          "OKR Management, CQMS, Performance Management, and Attendance Management from scratch.",
+          "CQMS, OKR Management, Performance Management, and Attendance Management from scratch.",
         contributions: [
-          "Shipped four enterprise-grade platforms used by 500–700 employees globally.",
+          "Shipped enterprise-grade platforms used by 500–700 employees globally.",
           "CQMS (AI-powered audit) cut audit time ~50%, doubled capacity, consolidated 4+ tools, and replaced Scorebuddy — $4,000+ annual savings.",
           "Custom builds replaced off-the-shelf SaaS, saving the organization $5,000–$10,000 per year.",
         ],
         stack: ["TypeScript", "React", "Next.js", "Node.js", "PostgreSQL", "AWS"],
       },
       {
-        title: "BI, AI & automation",
-        role: "Dashboards & n8n workflows",
+        title: "Caliper · BI & automation",
+        role: "AI products · n8n · dashboards",
         summary:
-          "Leadership visibility into KPIs plus AI-powered automation that reduced manual workload.",
+          "AI CV screening (Caliper), leadership KPI visibility, and automation that reduced manual workload.",
         contributions: [
+          "Built Caliper’s Fastify + AWS path for CV upload, scoring, and recruiter workflows.",
           "Designed BI dashboards and reporting for real-time operational health.",
           "Deployed n8n automation workflows that boosted cross-team productivity.",
-          "Owned full lifecycles: architecture, Figma UX, frontend, backend, and AWS deploy.",
         ],
-        stack: ["n8n", "Supabase", "AWS", "Figma"],
+        stack: ["Fastify", "AWS", "n8n", "Supabase", "Figma"],
       },
     ],
   },
