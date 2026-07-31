@@ -65,23 +65,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "CQMS",
-    subtitle: "Enterprise quality & audit platform",
-    description:
-      "AI-assisted quality management system for NEXT Ventures — audits, scoring, and ops workflows used across a global workforce, replacing multiple commercial SaaS tools.",
-    highlights: [
-      "Core contributor on a large production web platform (CQMS / Web-CQMS) used by 500–700 employees globally.",
-      "Helped cut audit time ~50%, consolidate 4+ tools, and replace Scorebuddy — $4,000+ annual savings.",
-      "Shipped AI-powered audit flows with progress tracking and results surfaces for ops leadership.",
-    ],
-    stack: ["TypeScript", "React", "Next.js", "PostgreSQL", "n8n", "AWS"],
-    live: "https://cqms-v2.vercel.app",
-    repo: "https://github.com/NEXT-Data-Automation-and-Research/cqms",
-    year: "2025–2026",
-    image: "/projects/cqms.png",
-    featured: true,
-  },
-  {
     title: "Caliper",
     subtitle: "AI CV screening",
     description:
@@ -144,6 +127,21 @@ export const projects: Project[] = [
     stack: ["TypeScript", "React", "Next.js", "Node.js", "AWS", "PostgreSQL", "Kotlin"],
     year: "2026",
     image: "/projects/cdbl-investor-portal.png",
+    featured: true,
+  },
+  {
+    title: "CQMS",
+    subtitle: "Enterprise quality & audit platform",
+    description:
+      "AI-assisted quality management system for NEXT Ventures — audits, scoring, and ops workflows used across a global workforce, replacing multiple commercial SaaS tools.",
+    highlights: [
+      "Core contributor on a large production web platform (CQMS / Web-CQMS) used by 500–700 employees globally.",
+      "Helped cut audit time ~50%, consolidate 4+ tools, and replace Scorebuddy — $4,000+ annual savings.",
+      "Shipped AI-powered audit flows with progress tracking and results surfaces for ops leadership.",
+    ],
+    stack: ["TypeScript", "React", "Next.js", "PostgreSQL", "n8n", "AWS"],
+    year: "2025–2026",
+    image: "/projects/cqms.png",
     featured: true,
   },
   {
