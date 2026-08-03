@@ -43,10 +43,12 @@ export type Project = {
 };
 
 /**
- * Portfolio projects — tight shortlist.
- * Featured = main grid (case-study depth). Non-featured with image = "More work".
+ * Portfolio projects.
+ * Order: hosted/live first (by competency), then unhosted.
+ * Featured = main grid. Non-featured with image = "More work".
  */
 export const projects: Project[] = [
+  // ——— Hosted (live URL) — strongest first ———
   {
     title: "OneSign",
     subtitle: "Digital signage platform",
@@ -62,22 +64,6 @@ export const projects: Project[] = [
     repo: "https://github.com/Inventive-Lab-Inc/onesign",
     year: "2025–2026",
     image: "/projects/onesign.jpg",
-    featured: true,
-  },
-  {
-    title: "Caliper",
-    subtitle: "AI CV screening",
-    description:
-      "Recruiter-facing CV screening product: upload or pull CVs, score candidates against job criteria, and surface related LinkedIn profiles — React frontend with a Fastify API on AWS.",
-    highlights: [
-      "Designed a production architecture: React + Vite client, Fastify API, Google OAuth, AWS RDS Postgres, and S3 for CV storage.",
-      "Built AI scoring against job criteria with optional Recruitee / profile-discovery integrations.",
-      "Workspace provisioning, JWT auth via Google JWKS, and encrypted workspace API keys at the boundary.",
-    ],
-    stack: ["React", "TypeScript", "Fastify", "AWS", "PostgreSQL", "S3"],
-    repo: "https://github.com/aminulnv/Caliper-CV-Screening",
-    year: "2026",
-    image: "/projects/caliper.png",
     featured: true,
   },
   {
@@ -98,8 +84,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Diagnostic Center",
-    subtitle: "Healthcare portal",
+    title: "Diagnostic Center",    subtitle: "Healthcare portal",
     description:
       "Multi-tenant diagnostic template with a bilingual public site (Bangla / English), patient OTP portal, and staff admin for bookings and reports.",
     highlights: [
@@ -115,33 +100,147 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "CDBL Investor Portal",
-    subtitle: "Capital markets platform",
+    title: "Inventive Lab",
+    subtitle: "Company website",
     description:
-      "Lead developer for Tech4Time on a multi-module platform for Central Depository Bangladesh Limited (CDBL) — investor, data, document, nominee, and client management plus a companion Android app.",
+      "Marketing site for Inventive Lab Inc — product studio behind OneSign and client systems across legal, healthcare, and capital markets.",
     highlights: [
-      "Owned end-to-end delivery across Investor Portal, Data Portal, Document Management, Nominee Management, and Client Management.",
-      "Full stack from system architecture and Figma UX through React/Next.js, Node.js on AWS, and PostgreSQL.",
-      "Shipped a companion Android app (Java/Kotlin) integrated with the web platform.",
+      "Shipped a responsive Next.js marketing site for the studio brand and product narrative.",
+      "Positioned OneSign and delivery capabilities for prospects and partners.",
     ],
-    stack: ["TypeScript", "React", "Next.js", "Node.js", "AWS", "PostgreSQL", "Kotlin"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    live: "https://inventivelab.bd",
+    repo: "https://github.com/mr-aminul/inventivelab-website",
     year: "2026",
-    image: "/projects/cdbl-investor-portal.png",
+    image: "/projects/inventivelab.png",
     featured: true,
   },
   {
-    title: "CQMS",
-    subtitle: "Enterprise quality & audit platform",
+    title: "ChiliRig",
+    subtitle: "Order & ops platform",
     description:
-      "AI-assisted quality management system for NEXT Ventures — audits, scoring, and ops workflows used across a global workforce, replacing multiple commercial SaaS tools.",
+      "Order management product with cancellation flows, address validation, and Discord notifications for ops handoff.",
     highlights: [
-      "Core contributor on a large production web platform (CQMS / Web-CQMS) used by 500–700 employees globally.",
-      "Helped cut audit time ~50%, consolidate 4+ tools, and replace Scorebuddy — $4,000+ annual savings.",
-      "Shipped AI-powered audit flows with progress tracking and results surfaces for ops leadership.",
+      "Built order lifecycle surfaces with cancellation and address validation.",
+      "Integrated Discord alerts so ops teams catch order events in realtime.",
     ],
-    stack: ["TypeScript", "React", "Next.js", "PostgreSQL", "n8n", "AWS"],
-    year: "2025–2026",
-    image: "/projects/cqms.png",
+    stack: ["Next.js", "TypeScript", "Vercel"],
+    live: "https://chilirig.vercel.app",
+    repo: "https://github.com/mr-aminul/chilirig",
+    year: "2026",
+    image: "/projects/chilirig-hero.png",
+    featured: true,
+  },
+  {
+    title: "Invoice Management",
+    subtitle: "Invoicing & estimates",
+    description:
+      "Business invoicing workspace — create invoices and estimates, manage businesses, and handle credit notes in a responsive TypeScript app.",
+    highlights: [
+      "Shipped invoice, estimate, and credit-note flows with multi-business selection.",
+      "Polished responsive forms and layout for day-to-day finance ops.",
+    ],
+    stack: ["React", "TypeScript", "Vite"],
+    live: "https://invoice-management-system-three-chi.vercel.app",
+    repo: "https://github.com/mr-aminul/invoice-management-system",
+    year: "2026",
+    image: "/projects/invoice-management.png",
+    featured: true,
+  },
+  {
+    title: "Bus Management System",
+    subtitle: "Fleet & operations",
+    description:
+      "Fleet operations dashboard for routes, tickets, counters, and reporting — a TypeScript ops console for bus operators.",
+    highlights: [
+      "Built operations dashboard covering fleet, routes, tickets, and counters.",
+      "Shipped reports and navigation shell ready for operator workflows.",
+    ],
+    stack: ["React", "TypeScript", "Vite"],
+    live: "https://bus-mgt-system.vercel.app",
+    repo: "https://github.com/mr-aminul/bus-mgt-system",
+    year: "2026",
+    image: "/projects/bus-mgt-login.png",
+    featured: true,
+  },
+  {
+    title: "Auth Basement",
+    subtitle: "Auth starter kit",
+    description:
+      "Reusable React + TypeScript authentication template on Supabase Auth — sign up, sign in, password reset, and a responsive app shell.",
+    highlights: [
+      "Packaged auth context, protected routes, and default auth pages for reuse across clients.",
+      "Sidebar/top-bar app layout with responsive drawer behavior out of the box.",
+    ],
+    stack: ["React", "TypeScript", "Supabase", "Vite"],
+    live: "https://auth-basement.vercel.app",
+    repo: "https://github.com/mr-aminul/Auth-Basement",
+    year: "2026",
+    image: "/projects/auth-basement.png",
+    featured: true,
+  },
+  {
+    title: "SaaS Basement",
+    subtitle: "SaaS app shell",
+    description:
+      "Reusable SaaS starter with Supabase Auth and a top-navigation app shell — drop-in foundation for multi-client products.",
+    highlights: [
+      "Auth flows plus top-nav layout ready to point at any Supabase project.",
+      "Shared config for brand, nav, and page headings so new apps start faster.",
+    ],
+    stack: ["React", "TypeScript", "Supabase", "Vite"],
+    live: "https://saas-basement.vercel.app",
+    repo: "https://github.com/mr-aminul/SaaS-Basement",
+    year: "2026",
+    image: "/projects/saas-basement.png",
+    featured: true,
+  },
+  {
+    title: "MoneyLogger",
+    subtitle: "Expense tracker",
+    description:
+      "Personal finance app with Google sign-in, budgets, charts, CSV export, and voice input — React + Supabase.",
+    highlights: [
+      "Built expense CRUD, category budgets, and monthly/yearly summaries with charts.",
+      "Added voice input and Google auth via Supabase for cross-device sync.",
+    ],
+    stack: ["React", "TypeScript", "Supabase", "Recharts"],
+    live: "https://moneylogger.vercel.app",
+    repo: "https://github.com/mr-aminul/moneylogger",
+    year: "2026",
+    image: "/projects/moneylogger.png",
+    featured: true,
+  },
+  {
+    title: "Shah Jalal Fabricators",
+    subtitle: "Business website",
+    description:
+      "Marketing site for Shah Jalal Fabricators — company presence and services on a Vite/JS frontend deployed to Vercel.",
+    highlights: [
+      "Shipped a client-facing business website with Vercel deploy config.",
+      "Structured web build for a production fabricators brand.",
+    ],
+    stack: ["JavaScript", "Vite", "Vercel"],
+    live: "https://shahjalal-fabricators.vercel.app",
+    repo: "https://github.com/mr-aminul/shahjalal-fabricators",
+    year: "2026",
+    image: "/projects/shahjalal-fabricators.png",
+    featured: true,
+  },
+  {
+    title: "CustomEcom",
+    subtitle: "Ecommerce admin + storefront",
+    description:
+      "Open-source ecommerce admin and shop — products, orders, customers, and store settings on Next.js with shadcn/ui, plus a customer-facing storefront.",
+    highlights: [
+      "Built product, order, and customer management surfaces with a clean shadcn/ui shell.",
+      "Shipped cart/checkout storefront alongside the admin dashboard.",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+    live: "https://ecommerce-sand-gamma-74.vercel.app",
+    repo: "https://github.com/mr-aminul/ecommerce",
+    year: "2026",
+    image: "/projects/customecom.png",
     featured: true,
   },
   {
@@ -155,9 +254,58 @@ export const projects: Project[] = [
       "Collaborated across web and mobile surfaces used in live store operations.",
     ],
     stack: ["TypeScript", "React", "Express", "Mobile"],
+    live: "https://krunch-xi.vercel.app/pos",
     repo: "https://github.com/SaifIvnaAlam/krunch-pos",
     year: "2026",
     image: "/projects/krunch-pos.png",
+    featured: true,
+  },
+  {
+    title: "QuizMaster",
+    subtitle: "Interactive quiz platform",
+    description:
+      "University project — interactive quiz platform built with PHP and MySQL, deployed with a live Vercel demo.",
+    highlights: [
+      "Built quiz flows on PHP + MySQL with a deployable Vercel surface.",
+      "Documented live demo for coursework presentation.",
+    ],
+    stack: ["PHP", "MySQL", "Vercel"],
+    live: "https://quizmaster-liard-six.vercel.app",
+    repo: "https://github.com/mr-aminul/QuizMaster",
+    year: "2026",
+    image: "/projects/quizmaster.png",
+    featured: true,
+  },
+
+  // ——— Unhosted (no public live URL) — by competency ———
+  {
+    title: "Caliper",
+    subtitle: "AI CV screening",
+    description:
+      "Recruiter-facing CV screening product: upload or pull CVs, score candidates against job criteria, and surface related LinkedIn profiles — React frontend with a Fastify API on AWS.",
+    highlights: [
+      "Designed a production architecture: React + Vite client, Fastify API, Google OAuth, AWS RDS Postgres, and S3 for CV storage.",
+      "Built AI scoring against job criteria with optional Recruitee / profile-discovery integrations.",
+      "Workspace provisioning, JWT auth via Google JWKS, and encrypted workspace API keys at the boundary.",
+    ],
+    stack: ["React", "TypeScript", "Fastify", "AWS", "PostgreSQL", "S3"],
+    repo: "https://github.com/aminulnv/Caliper-CV-Screening",
+    year: "2026",
+    image: "/projects/caliper-login.png",
+  },
+  {
+    title: "CDBL Investor Portal",
+    subtitle: "Capital markets platform",
+    description:
+      "Lead developer for Tech4Time on a multi-module platform for Central Depository Bangladesh Limited (CDBL) — investor, data, document, nominee, and client management plus a companion Android app.",
+    highlights: [
+      "Owned end-to-end delivery across Investor Portal, Data Portal, Document Management, Nominee Management, and Client Management.",
+      "Full stack from system architecture and Figma UX through React/Next.js, Node.js on AWS, and PostgreSQL.",
+      "Shipped a companion Android app (Java/Kotlin) integrated with the web platform.",
+    ],
+    stack: ["TypeScript", "React", "Next.js", "Node.js", "AWS", "PostgreSQL", "Kotlin"],
+    year: "2026",
+    image: "/projects/cdbl-investor-portal.png",
   },
 ];
 

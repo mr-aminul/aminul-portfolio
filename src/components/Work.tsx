@@ -155,7 +155,7 @@ export function Work() {
 
         {more.length > 0 ? (
           <div className="reveal mt-10">
-            <p className="section-label mb-4">More work</p>
+            <p className="section-label mb-4">Also shipped</p>
             <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               {more.map((project) => (
                 <li key={`${project.title}-${project.year}-${project.subtitle}`}>
