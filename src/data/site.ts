@@ -100,6 +100,23 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Investor Connect",
+    subtitle: "Investment matchmaking",
+    description:
+      "Bangladesh investment matchmaking — Flutter app as the product of record, with a Next.js desktop companion for landing, opportunities, deal room, escrow fund, and portfolio flows.",
+    highlights: [
+      "Built dual-platform demo: Flutter swipe deck → matches → deal room → escrow fund → portfolio, plus a seeker create wizard.",
+      "Shipped Next.js web companion with the same investor/seeker flows and localStorage demo state.",
+      "Wired end-to-end frontend object model across deck, matches, fund, and portfolio without a backend yet.",
+    ],
+    stack: ["Next.js", "Flutter", "TypeScript", "Tailwind CSS"],
+    live: "https://investor-connect-beta.vercel.app",
+    repo: "https://github.com/mr-aminul/investor-connect",
+    year: "2026",
+    image: "/projects/investor-connect.jpg",
+    featured: true,
+  },
+  {
     title: "Inventive Lab",
     subtitle: "Company website",
     description:
