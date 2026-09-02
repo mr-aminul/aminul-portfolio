@@ -51,7 +51,7 @@ const targets = [
   },
 ];
 
-async function captureOne(browser, { slug, url, ext = "png" }) {
+async function captureOne(browser, { slug, url, ext = "png", waitForImg }) {
   const outPath = path.join(OUT_DIR, `${slug}.${ext}`);
   const context = await browser.newContext({
     viewport: { width: 1440, height: 900 },
@@ -60,8 +60,22 @@ async function captureOne(browser, { slug, url, ext = "png" }) {
   const page = await context.newPage();
 
   try {
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-    await page.waitForTimeout(2500);
+    await page.goto(url, {
+      waitUntil: waitForImg ? "networkidle" : "domcontentloaded",
+      timeout: 120000,
+    });
+    if (waitForImg) {
+      await page.waitForFunction(
+        (sel) => {
+          const img = document.querySelector(sel);
+          return img && img.complete && img.naturalWidth > 200;
+        },
+        waitForImg,
+        { timeout: 90000 },
+      );
+    }
+    await page.waitForTimeout(waitForImg ? 1500 : 2500);
+    await page.evaluate(() => window.scrollTo(0, 0));
     await page.keyboard.press("Escape").catch(() => {});
     await page.screenshot({
       path: outPath,
