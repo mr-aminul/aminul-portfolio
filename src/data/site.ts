@@ -133,6 +133,40 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Viable",
+    subtitle: "Footwear storefront",
+    description:
+      "Gen Z footwear brand site for Dhaka — foam runners, crocs, slides, and sneakers with a motion-led shop, PDP, cart, and WhatsApp-first ordering.",
+    highlights: [
+      "Built a React + Vite SPA with shop, product detail, size selection, cart, and wishlist flows.",
+      "Designed a full-bleed Framer Motion hero and mobile-first commerce UX tuned for casual footwear.",
+      "Wired WhatsApp ordering with COD and delivery trust cues for local checkout without a payment gateway.",
+    ],
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
+    live: "https://viable.inventivelab.bd",
+    repo: "https://github.com/mr-aminul/viable-footwear-website",
+    year: "2026",
+    image: "/projects/viable.png",
+    featured: true,
+  },
+  {
+    title: "Pet Delight BD",
+    subtitle: "Pet food ecommerce",
+    description:
+      "Redesigned storefront for Pet Delight’s Uttara shop — bilingual catalog of dry food, pouches, litter, and accessories with cart, checkout, and order tracking.",
+    highlights: [
+      "Shipped full commerce UX: shop, search, PDP, cart, checkout, and order track with browser-side cart state.",
+      "Added EN/BN locale toggle with localized catalog copy for Dhaka customers.",
+      "Covered trust and ops pages — blog, FAQ, stores, delivery, and returns — matching the live petdelightbd.com business.",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    live: "https://petdelight.inventivelab.bd",
+    repo: "https://github.com/mr-aminul/pets-delight-website",
+    year: "2026",
+    image: "/projects/pets-delight.png",
+    featured: true,
+  },
+  {
     title: "ChiliRig",
     subtitle: "Order & ops platform",
     description:

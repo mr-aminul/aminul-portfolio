@@ -13,6 +13,12 @@ const targets = [
     ext: "jpg",
   },
   { slug: "inventivelab", url: "https://inventivelab.bd", ext: "png" },
+  { slug: "viable", url: "https://viable.inventivelab.bd", ext: "png" },
+  {
+    slug: "pets-delight",
+    url: "https://petdelight.inventivelab.bd",
+    ext: "png",
+  },
   { slug: "chilirig-hero", url: "https://chilirig.vercel.app", ext: "png" },
   {
     slug: "invoice-management",
