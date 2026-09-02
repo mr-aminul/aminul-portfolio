@@ -13,7 +13,13 @@ const targets = [
     ext: "jpg",
   },
   { slug: "inventivelab", url: "https://inventivelab.bd", ext: "png" },
-  { slug: "viable", url: "https://viable.inventivelab.bd", ext: "png" },
+  {
+    slug: "viable",
+    url: "https://viable.inventivelab.bd",
+    ext: "png",
+    // Hero PNG is ~2.3MB — wait until it paints or thumbnail is empty navy.
+    waitForImg: 'img[src*="hero"]',
+  },
   {
     slug: "pets-delight",
     url: "https://petdelight.inventivelab.bd",
