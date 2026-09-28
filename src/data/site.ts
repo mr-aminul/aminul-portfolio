@@ -134,16 +134,16 @@ export const projects: Project[] = [
   },
   {
     title: "Viable",
-    subtitle: "Footwear storefront",
+    subtitle: "Footwear storefront + admin",
     description:
-      "Gen Z footwear brand site for Dhaka — foam runners, crocs, slides, and sneakers with a motion-led shop, PDP, cart, and WhatsApp-first ordering.",
+      "Gen Z footwear brand for Dhaka — Next.js storefront with shop, PDP, cart, wishlist, and WhatsApp-first ordering, plus a Supabase-backed admin for catalog, inventory, orders, and campaigns.",
     highlights: [
-      "Built a React + Vite SPA with shop, product detail, size selection, cart, and wishlist flows.",
-      "Designed a full-bleed Framer Motion hero and mobile-first commerce UX tuned for casual footwear.",
-      "Wired WhatsApp ordering with COD and delivery trust cues for local checkout without a payment gateway.",
+      "Migrated from a Vite SPA to Next.js 15 App Router with a live Supabase catalog, RLS, and staff auth.",
+      "Built Admin/Manager ops: categories, products, variants, media, inventory, orders, offers, and analytics.",
+      "Shipped motion-led storefront UX with cart/wishlist flows and WhatsApp COD checkout for local buyers.",
     ],
-    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion"],
-    live: "https://viable.inventivelab.bd",
+    stack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    live: "https://viable-footwear.vercel.app",
     repo: "https://github.com/mr-aminul/viable-footwear-website",
     year: "2026",
     image: "/projects/viable.png",

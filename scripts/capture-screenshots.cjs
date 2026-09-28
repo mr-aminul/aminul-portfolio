@@ -15,7 +15,7 @@ const targets = [
   { slug: "inventivelab", url: "https://inventivelab.bd", ext: "png" },
   {
     slug: "viable",
-    url: "https://viable.inventivelab.bd",
+    url: "https://viable-footwear.vercel.app",
     ext: "png",
     // Hero PNG is ~2.3MB — wait until it paints or thumbnail is empty navy.
     waitForImg: 'img[src*="hero"]',
