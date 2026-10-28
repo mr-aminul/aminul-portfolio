@@ -151,6 +151,23 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "GoVibe",
+    subtitle: "Bags storefront + admin",
+    description:
+      "Men’s bags & everyday carries for Dhaka — Next.js storefront with shop, PDP, cart, and checkout, plus Admin/Manager ops for catalog, inventory, orders, Pathao delivery, and optional bKash/Nagad.",
+    highlights: [
+      "Shipped Next.js 15 App Router storefront + staff console on a dedicated VPS (Caddy + systemd).",
+      "Isolated Postgres/PostgREST and MinIO media from Viable so each brand runs as its own stack.",
+      "Wired Pathao consignments and prepaid wallet options alongside COD for local buyers.",
+    ],
+    stack: ["Next.js", "PostgreSQL", "PostgREST", "MinIO", "TypeScript", "Tailwind CSS"],
+    live: "https://govibe.inventivelab.bd",
+    repo: "https://github.com/mr-aminul/govibe-ecommerce-website",
+    year: "2026",
+    image: "/projects/govibe.png",
+    featured: true,
+  },
+  {
     title: "Pet Delight BD",
     subtitle: "Pet food ecommerce",
     description:
