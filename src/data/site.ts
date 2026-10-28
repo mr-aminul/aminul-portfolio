@@ -84,7 +84,8 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Diagnostic Center",    subtitle: "Healthcare portal",
+    title: "Diagnostic Center",
+    subtitle: "Healthcare portal",
     description:
       "Multi-tenant diagnostic template with a bilingual public site (Bangla / English), patient OTP portal, and staff admin for bookings and reports.",
     highlights: [
@@ -110,7 +111,7 @@ export const projects: Project[] = [
       "Wired end-to-end frontend object model across deck, matches, fund, and portfolio without a backend yet.",
     ],
     stack: ["Next.js", "Flutter", "TypeScript", "Tailwind CSS"],
-    live: "https://investor-connect-beta.vercel.app",
+    live: "https://invest.inventivelab.bd",
     repo: "https://github.com/mr-aminul/investor-connect",
     year: "2026",
     image: "/projects/investor-connect.jpg",
@@ -143,7 +144,7 @@ export const projects: Project[] = [
       "Shipped motion-led storefront UX with cart/wishlist flows and WhatsApp COD checkout for local buyers.",
     ],
     stack: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    live: "https://viable-footwear.vercel.app",
+    live: "https://viable.fashion",
     repo: "https://github.com/mr-aminul/viable-footwear-website",
     year: "2026",
     image: "/projects/viable.png",
