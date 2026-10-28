@@ -43,12 +43,10 @@ export type Project = {
 };
 
 /**
- * Portfolio projects.
- * Order: hosted/live first (by competency), then unhosted.
+ * Portfolio projects — client-facing polish order (strongest first).
  * Featured = main grid. Non-featured with image = "More work".
  */
 export const projects: Project[] = [
-  // ——— Hosted (live URL) — strongest first ———
   {
     title: "OneSign",
     subtitle: "Digital signage platform",
@@ -64,73 +62,6 @@ export const projects: Project[] = [
     repo: "https://github.com/Inventive-Lab-Inc/onesign",
     year: "2025–2026",
     image: "/projects/onesign.jpg",
-    featured: true,
-  },
-  {
-    title: "Ukilai",
-    subtitle: "Law firm ERP",
-    description:
-      "Cases, billing, staff, and day-to-day operations for legal teams — a production ERP spanning a Next.js UI and a Go GraphQL API.",
-    highlights: [
-      "Owned full-stack delivery: case workflows, billing surfaces, and shared design tokens across the monorepo.",
-      "Split concerns with a Go + GraphQL API so legal ops data stays consistent for staff and partners.",
-      "Shipped a deployable Vercel frontend used as the live product surface for firm operations.",
-    ],
-    stack: ["Next.js", "Go", "GraphQL", "TypeScript"],
-    live: "https://ukilai.vercel.app",
-    repo: "https://github.com/mr-aminul/law-erp",
-    year: "2025–2026",
-    image: "/projects/ukilai.png",
-    featured: true,
-  },
-  {
-    title: "Diagnostic Center",
-    subtitle: "Healthcare portal",
-    description:
-      "Multi-tenant diagnostic template with a bilingual public site (Bangla / English), patient OTP portal, and staff admin for bookings and reports.",
-    highlights: [
-      "Designed multi-tenant structure so clinics can run branded public + staff experiences from one codebase.",
-      "Built patient OTP access and staff admin for bookings, reports, and operational handoff.",
-      "Shipped Bangla/English UX so front-desk and patient flows work for local teams.",
-    ],
-    stack: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
-    live: "https://diagnostic-center-website-omega.vercel.app",
-    repo: "https://github.com/mr-aminul/diagnostic-center-website",
-    year: "2025–2026",
-    image: "/projects/diagnostic-center.jpg",
-    featured: true,
-  },
-  {
-    title: "Investor Connect",
-    subtitle: "Investment matchmaking",
-    description:
-      "Bangladesh investment matchmaking — Flutter app as the product of record, with a Next.js desktop companion for landing, opportunities, deal room, escrow fund, and portfolio flows.",
-    highlights: [
-      "Built dual-platform demo: Flutter swipe deck → matches → deal room → escrow fund → portfolio, plus a seeker create wizard.",
-      "Shipped Next.js web companion with the same investor/seeker flows and localStorage demo state.",
-      "Wired end-to-end frontend object model across deck, matches, fund, and portfolio without a backend yet.",
-    ],
-    stack: ["Next.js", "Flutter", "TypeScript", "Tailwind CSS"],
-    live: "https://invest.inventivelab.bd",
-    repo: "https://github.com/mr-aminul/investor-connect",
-    year: "2026",
-    image: "/projects/investor-connect.jpg",
-    featured: true,
-  },
-  {
-    title: "Inventive Lab",
-    subtitle: "Company website",
-    description:
-      "Marketing site for Inventive Lab Inc — product studio behind OneSign and client systems across legal, healthcare, and capital markets.",
-    highlights: [
-      "Shipped a responsive Next.js marketing site for the studio brand and product narrative.",
-      "Positioned OneSign and delivery capabilities for prospects and partners.",
-    ],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    live: "https://inventivelab.bd",
-    repo: "https://github.com/mr-aminul/inventivelab-website",
-    year: "2026",
-    image: "/projects/inventivelab.png",
     featured: true,
   },
   {
@@ -168,6 +99,88 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Ukilai",
+    subtitle: "Law firm ERP",
+    description:
+      "Cases, billing, staff, and day-to-day operations for legal teams — a production ERP spanning a Next.js UI and a Go GraphQL API.",
+    highlights: [
+      "Owned full-stack delivery: case workflows, billing surfaces, and shared design tokens across the monorepo.",
+      "Split concerns with a Go + GraphQL API so legal ops data stays consistent for staff and partners.",
+      "Shipped a deployable Vercel frontend used as the live product surface for firm operations.",
+    ],
+    stack: ["Next.js", "Go", "GraphQL", "TypeScript"],
+    live: "https://ukilai.vercel.app",
+    repo: "https://github.com/mr-aminul/law-erp",
+    year: "2025–2026",
+    image: "/projects/ukilai.png",
+    featured: true,
+  },
+  {
+    title: "Caliper",
+    subtitle: "AI CV screening",
+    description:
+      "Recruiter-facing CV screening product: upload or pull CVs, score candidates against job criteria, and surface related LinkedIn profiles — React frontend with a Fastify API on AWS.",
+    highlights: [
+      "Designed a production architecture: React + Vite client, Fastify API, Google OAuth, AWS RDS Postgres, and S3 for CV storage.",
+      "Built AI scoring against job criteria with optional Recruitee / profile-discovery integrations.",
+      "Workspace provisioning, JWT auth via Google JWKS, and encrypted workspace API keys at the boundary.",
+    ],
+    stack: ["React", "TypeScript", "Fastify", "AWS", "PostgreSQL", "S3"],
+    repo: "https://github.com/aminulnv/Caliper-CV-Screening",
+    year: "2026",
+    image: "/projects/caliper-login.png",
+    featured: true,
+  },
+  {
+    title: "CDBL Investor Portal",
+    subtitle: "Capital markets platform",
+    description:
+      "Lead developer for Tech4Time on a multi-module platform for Central Depository Bangladesh Limited (CDBL) — investor, data, document, nominee, and client management plus a companion Android app.",
+    highlights: [
+      "Owned end-to-end delivery across Investor Portal, Data Portal, Document Management, Nominee Management, and Client Management.",
+      "Full stack from system architecture and Figma UX through React/Next.js, Node.js on AWS, and PostgreSQL.",
+      "Shipped a companion Android app (Java/Kotlin) integrated with the web platform.",
+    ],
+    stack: ["TypeScript", "React", "Next.js", "Node.js", "AWS", "PostgreSQL", "Kotlin"],
+    year: "2026",
+    image: "/projects/cdbl-investor-portal.png",
+    featured: true,
+  },
+  {
+    title: "Investor Connect",
+    subtitle: "Investment matchmaking",
+    description:
+      "Bangladesh investment matchmaking — Flutter app as the product of record, with a Next.js desktop companion for landing, opportunities, deal room, escrow fund, and portfolio flows.",
+    highlights: [
+      "Built dual-platform demo: Flutter swipe deck → matches → deal room → escrow fund → portfolio, plus a seeker create wizard.",
+      "Shipped Next.js web companion with the same investor/seeker flows and localStorage demo state.",
+      "Wired end-to-end frontend object model across deck, matches, fund, and portfolio without a backend yet.",
+    ],
+    stack: ["Next.js", "Flutter", "TypeScript", "Tailwind CSS"],
+    live: "https://invest.inventivelab.bd",
+    repo: "https://github.com/mr-aminul/investor-connect",
+    year: "2026",
+    image: "/projects/investor-connect.jpg",
+    featured: true,
+  },
+  {
+    title: "Diagnostic Center",
+    subtitle: "Healthcare portal",
+    description:
+      "Multi-tenant diagnostic template with a bilingual public site (Bangla / English), patient OTP portal, and staff admin for bookings and reports.",
+    highlights: [
+      "Designed multi-tenant structure so clinics can run branded public + staff experiences from one codebase.",
+      "Built patient OTP access and staff admin for bookings, reports, and operational handoff.",
+      "Shipped Bangla/English UX so front-desk and patient flows work for local teams.",
+    ],
+    stack: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
+    live: "https://diagnostic-center-website-omega.vercel.app",
+    repo: "https://github.com/mr-aminul/diagnostic-center-website",
+    year: "2025–2026",
+    image: "/projects/diagnostic-center.jpg",
+    featured: true,
+  },
+  {
     title: "Pet Delight BD",
     subtitle: "Pet food ecommerce",
     description:
@@ -185,6 +198,39 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Krunch POS",
+    subtitle: "Point of sale · contribution",
+    description:
+      "Restaurant POS and back-office workspace — contributed billing, ledger, calendar, admin users, and mobile console improvements on a TypeScript + native stack.",
+    highlights: [
+      "Shipped billing QA fixes, workspace/admin flows, and mobile UI polish ahead of deploy.",
+      "Hardened Daily Entry / ledger saves against API body-size limits for real shift volumes.",
+      "Collaborated across web and mobile surfaces used in live store operations.",
+    ],
+    stack: ["TypeScript", "React", "Express", "Mobile"],
+    live: "https://krunch-xi.vercel.app/pos",
+    repo: "https://github.com/SaifIvnaAlam/krunch-pos",
+    year: "2026",
+    image: "/projects/krunch-pos.png",
+    featured: true,
+  },
+  {
+    title: "Inventive Lab",
+    subtitle: "Company website",
+    description:
+      "Marketing site for Inventive Lab Inc — product studio behind OneSign and client systems across legal, healthcare, and capital markets.",
+    highlights: [
+      "Shipped a responsive Next.js marketing site for the studio brand and product narrative.",
+      "Positioned OneSign and delivery capabilities for prospects and partners.",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    live: "https://inventivelab.bd",
+    repo: "https://github.com/mr-aminul/inventivelab-website",
+    year: "2026",
+    image: "/projects/inventivelab.png",
+    featured: true,
+  },
+  {
     title: "ChiliRig",
     subtitle: "Order & ops platform",
     description:
@@ -198,6 +244,22 @@ export const projects: Project[] = [
     repo: "https://github.com/mr-aminul/chilirig",
     year: "2026",
     image: "/projects/chilirig-hero.png",
+    featured: true,
+  },
+  {
+    title: "CustomEcom",
+    subtitle: "Ecommerce admin + storefront",
+    description:
+      "Open-source ecommerce admin and shop — products, orders, customers, and store settings on Next.js with shadcn/ui, plus a customer-facing storefront.",
+    highlights: [
+      "Built product, order, and customer management surfaces with a clean shadcn/ui shell.",
+      "Shipped cart/checkout storefront alongside the admin dashboard.",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+    live: "https://ecommerce-sand-gamma-74.vercel.app",
+    repo: "https://github.com/mr-aminul/ecommerce",
+    year: "2026",
+    image: "/projects/customecom.png",
     featured: true,
   },
   {
@@ -233,6 +295,22 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "MoneyLogger",
+    subtitle: "Expense tracker",
+    description:
+      "Personal finance app with Google sign-in, budgets, charts, CSV export, and voice input — React + Supabase.",
+    highlights: [
+      "Built expense CRUD, category budgets, and monthly/yearly summaries with charts.",
+      "Added voice input and Google auth via Supabase for cross-device sync.",
+    ],
+    stack: ["React", "TypeScript", "Supabase", "Recharts"],
+    live: "https://moneylogger.vercel.app",
+    repo: "https://github.com/mr-aminul/moneylogger",
+    year: "2026",
+    image: "/projects/moneylogger.png",
+    featured: true,
+  },
+  {
     title: "Auth Basement",
     subtitle: "Auth starter kit",
     description:
@@ -265,22 +343,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "MoneyLogger",
-    subtitle: "Expense tracker",
-    description:
-      "Personal finance app with Google sign-in, budgets, charts, CSV export, and voice input — React + Supabase.",
-    highlights: [
-      "Built expense CRUD, category budgets, and monthly/yearly summaries with charts.",
-      "Added voice input and Google auth via Supabase for cross-device sync.",
-    ],
-    stack: ["React", "TypeScript", "Supabase", "Recharts"],
-    live: "https://moneylogger.vercel.app",
-    repo: "https://github.com/mr-aminul/moneylogger",
-    year: "2026",
-    image: "/projects/moneylogger.png",
-    featured: true,
-  },
-  {
     title: "Shah Jalal Fabricators",
     subtitle: "Business website",
     description:
@@ -294,39 +356,6 @@ export const projects: Project[] = [
     repo: "https://github.com/mr-aminul/shahjalal-fabricators",
     year: "2026",
     image: "/projects/shahjalal-fabricators.png",
-    featured: true,
-  },
-  {
-    title: "CustomEcom",
-    subtitle: "Ecommerce admin + storefront",
-    description:
-      "Open-source ecommerce admin and shop — products, orders, customers, and store settings on Next.js with shadcn/ui, plus a customer-facing storefront.",
-    highlights: [
-      "Built product, order, and customer management surfaces with a clean shadcn/ui shell.",
-      "Shipped cart/checkout storefront alongside the admin dashboard.",
-    ],
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
-    live: "https://ecommerce-sand-gamma-74.vercel.app",
-    repo: "https://github.com/mr-aminul/ecommerce",
-    year: "2026",
-    image: "/projects/customecom.png",
-    featured: true,
-  },
-  {
-    title: "Krunch POS",
-    subtitle: "Point of sale · contribution",
-    description:
-      "Restaurant POS and back-office workspace — contributed billing, ledger, calendar, admin users, and mobile console improvements on a TypeScript + native stack.",
-    highlights: [
-      "Shipped billing QA fixes, workspace/admin flows, and mobile UI polish ahead of deploy.",
-      "Hardened Daily Entry / ledger saves against API body-size limits for real shift volumes.",
-      "Collaborated across web and mobile surfaces used in live store operations.",
-    ],
-    stack: ["TypeScript", "React", "Express", "Mobile"],
-    live: "https://krunch-xi.vercel.app/pos",
-    repo: "https://github.com/SaifIvnaAlam/krunch-pos",
-    year: "2026",
-    image: "/projects/krunch-pos.png",
     featured: true,
   },
   {
@@ -344,37 +373,6 @@ export const projects: Project[] = [
     year: "2026",
     image: "/projects/quizmaster.png",
     featured: true,
-  },
-
-  // ——— Unhosted (no public live URL) — by competency ———
-  {
-    title: "Caliper",
-    subtitle: "AI CV screening",
-    description:
-      "Recruiter-facing CV screening product: upload or pull CVs, score candidates against job criteria, and surface related LinkedIn profiles — React frontend with a Fastify API on AWS.",
-    highlights: [
-      "Designed a production architecture: React + Vite client, Fastify API, Google OAuth, AWS RDS Postgres, and S3 for CV storage.",
-      "Built AI scoring against job criteria with optional Recruitee / profile-discovery integrations.",
-      "Workspace provisioning, JWT auth via Google JWKS, and encrypted workspace API keys at the boundary.",
-    ],
-    stack: ["React", "TypeScript", "Fastify", "AWS", "PostgreSQL", "S3"],
-    repo: "https://github.com/aminulnv/Caliper-CV-Screening",
-    year: "2026",
-    image: "/projects/caliper-login.png",
-  },
-  {
-    title: "CDBL Investor Portal",
-    subtitle: "Capital markets platform",
-    description:
-      "Lead developer for Tech4Time on a multi-module platform for Central Depository Bangladesh Limited (CDBL) — investor, data, document, nominee, and client management plus a companion Android app.",
-    highlights: [
-      "Owned end-to-end delivery across Investor Portal, Data Portal, Document Management, Nominee Management, and Client Management.",
-      "Full stack from system architecture and Figma UX through React/Next.js, Node.js on AWS, and PostgreSQL.",
-      "Shipped a companion Android app (Java/Kotlin) integrated with the web platform.",
-    ],
-    stack: ["TypeScript", "React", "Next.js", "Node.js", "AWS", "PostgreSQL", "Kotlin"],
-    year: "2026",
-    image: "/projects/cdbl-investor-portal.png",
   },
 ];
 
